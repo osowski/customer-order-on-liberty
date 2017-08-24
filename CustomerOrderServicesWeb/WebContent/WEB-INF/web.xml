@@ -6,18 +6,9 @@
 		<description>
 		JAX-RS Tools Generated - Do not modify</description>
 		<servlet-name>JAX-RS Servlet</servlet-name>
-		<servlet-class>com.ibm.websphere.jaxrs.server.IBMRestServlet</servlet-class>
-		<init-param>
-			<param-name >javax.ws.rs.Application</param-name>
-			<param-value >org.pwte.example.app.CustomerServicesApp</param-value>
-		</init-param>
+		<servlet-class>org.pwte.example.app.CustomerServicesApp</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>JAX-RS Servlet</servlet-name>
-		<url-pattern>
-		/jaxrs/*</url-pattern>
-	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
@@ -30,7 +21,6 @@
 			<web-resource-name>Customer</web-resource-name>
 			<url-pattern>/jaxrs/Customer</url-pattern>
 			<url-pattern>/jaxrs/Customer/*</url-pattern>
-			
 		</web-resource-collection>
 		<auth-constraint><role-name>SecureShopper</role-name></auth-constraint>
 	</security-constraint>
